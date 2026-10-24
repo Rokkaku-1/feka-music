@@ -1,0 +1,99 @@
+.install-section {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 42px 0 12px;
+  padding: 26px 0;
+  border-block: 1px solid var(--line);
+}
+.install-section > img,
+.install-app-icon {
+  flex-shrink: 0;
+  border-radius: 19px;
+  box-shadow: 0 8px 24px #c62f4820;
+}
+.install-copy {
+  flex: 1;
+  min-width: 0;
+}
+.install-copy h2 {
+  font: 750 22px var(--heading);
+  letter-spacing: -0.6px;
+  margin: 6px 0 8px;
+}
+.install-copy p:last-child {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 390px;
+}
+.install-section .primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  min-height: 44px;
+}
+#install-dialog {
+  max-width: 460px;
+}
+#install-dialog .install-app-icon {
+  margin-bottom: 22px;
+}
+#install-dialog h2 {
+  font-size: 30px;
+}
+#install-dialog h3 {
+  font-size: 13px;
+  margin-top: 24px;
+}
+#install-help ol {
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+#install-help li + li {
+  margin-top: 12px;
+}
+#install-status {
+  color: var(--accent);
+  font-size: 13px;
+  line-height: 1.6;
+}
+#install-confirm[hidden] {
+  display: none;
+}
+#install-confirm {
+  width: 100%;
+  min-height: 44px;
+  margin: 12px 0;
+}
+@media (max-width: 760px) {
+  .install-section {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px 0;
+  }
+  .install-section > img {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+  }
+  .install-copy {
+    flex-basis: calc(100% - 70px);
+  }
+  .install-copy h2 {
+    font-size: 20px;
+  }
+  .install-section .primary-button {
+    width: 100%;
+  }
+  #install-dialog {
+    padding: 28px 24px;
+    max-height: 85dvh;
+    overflow-y: auto;
+  }
+}

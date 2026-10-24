@@ -1,0 +1,146 @@
+html[data-season="halloween"] body {
+  --accent: #a3450a;
+  --accent-soft: #fce9d7;
+  --season-action: #ad480b;
+  --season-on-action: #fff;
+  --season-secondary: #a3450a;
+  --season-hero: #291a13;
+  --season-highlight: #ffb471;
+  --season-hero-button: #ffb471;
+  --season-hero-ink: #371906;
+  --glass-rose: rgb(233 133 49 / 0.14);
+  --glass-blue: rgb(191 122 48 / 0.1);
+}
+html[data-season="halloween"] body.dark {
+  --accent: #ffb471;
+  --accent-soft: #3e291e;
+  --season-action: #ffad63;
+  --season-on-action: #321600;
+  --season-secondary: #ffb471;
+  --glass-rose: rgb(233 133 49 / 0.18);
+  --glass-blue: rgb(191 122 48 / 0.1);
+}
+html[data-season="christmas"] body {
+  --accent: #136742;
+  --accent-soft: #e1f1e7;
+  --season-action: #136742;
+  --season-on-action: #fff;
+  --season-secondary: #b3263c;
+  --season-hero: #112f25;
+  --season-highlight: #ffb1b7;
+  --season-hero-button: #a7283a;
+  --season-hero-ink: #fff;
+  --glass-rose: rgb(188 56 73 / 0.12);
+  --glass-blue: rgb(41 133 88 / 0.13);
+}
+html[data-season="christmas"] body.dark {
+  --accent: #85e1ae;
+  --accent-soft: #203c2e;
+  --season-action: #85e1ae;
+  --season-on-action: #103121;
+  --season-secondary: #ffacb6;
+  --glass-rose: rgb(188 56 73 / 0.14);
+  --glass-blue: rgb(41 133 88 / 0.15);
+}
+html:not([data-season="default"]) .primary-button,
+html:not([data-season="default"]) .main-play {
+  background: var(--season-action);
+  color: var(--season-on-action);
+}
+html:not([data-season="default"]) .trending-hero {
+  background: var(--season-hero);
+}
+html:not([data-season="default"]) .trending-hero h2 em,
+html:not([data-season="default"]) .trending-hero .eyebrow {
+  color: var(--season-highlight);
+}
+html:not([data-season="default"]) .trending-hero .primary-button {
+  background: var(--season-hero-button);
+  color: var(--season-hero-ink);
+}
+html[data-season="christmas"] .brand-dot,
+html[data-season="christmas"] .mobile-brand span,
+html[data-season="christmas"] .favorite-current.is-saved,
+html[data-season="christmas"] .card-favorite.is-saved {
+  color: var(--season-secondary);
+}
+.season-banner {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 14px 18px;
+  margin: 0 0 25px;
+}
+.season-banner[hidden] {
+  display: none;
+}
+.season-banner > svg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.season-banner strong {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  margin-bottom: 4px;
+}
+.season-banner span > span {
+  font-size: 12px;
+}
+.season-spark {
+  margin-left: auto;
+  font-size: 28px;
+  color: var(--season-secondary);
+}
+html[data-season="christmas"] .season-banner {
+  border-left: 3px solid var(--season-secondary);
+}
+html[data-season="halloween"] .trending-hero::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 135px;
+  height: 135px;
+  opacity: 0.24;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 140' fill='none' stroke='%23ffb471'%3E%3Cpath d='M140 0 0 0m140 0v140M140 0 25 115M140 0 0 60M140 0 80 140M100 0Q105 35 140 40M60 0Q70 70 140 80M20 0Q35 105 140 120'/%3E%3C/svg%3E");
+}
+html[data-season="christmas"] .trending-hero::after {
+  content: "✧   ✦   ✧";
+  pointer-events: none;
+  position: absolute;
+  right: 25px;
+  top: 14px;
+  letter-spacing: 14px;
+  color: #e5c98b;
+  opacity: 0.65;
+  font-size: 22px;
+}
+@media (max-width: 760px) {
+  .season-banner {
+    padding: 12px;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .season-banner span > span {
+    font-size: 11px;
+  }
+  .season-spark {
+    font-size: 22px;
+  }
+  .season-banner > svg {
+    width: 27px;
+    height: 27px;
+  }
+}

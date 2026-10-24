@@ -1,0 +1,168 @@
+.brand {
+  font-size: 23px;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+.mobile-brand {
+  font-size: 23px;
+  letter-spacing: -1px;
+}
+.discovery-section {
+  margin-top: 36px;
+}
+.discovery-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.discovery-track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--surface);
+  min-width: 0;
+}
+.discovery-track img {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+}
+.discovery-track strong,
+.discovery-track small {
+  display: block;
+}
+.discovery-track small {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 4px;
+}
+.discovery-track > span {
+  min-width: 0;
+}
+.discovery-track strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.feature-note {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.feature-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.feature-tools button {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  font-size: 12px;
+}
+.account-form {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+}
+.account-form label {
+  font-size: 12px;
+  display: grid;
+  gap: 7px;
+}
+.account-form input,
+.account-form select {
+  width: 100%;
+  padding: 12px;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+}
+.account-tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+.account-tabs button {
+  border-radius: 20px;
+  padding: 9px 15px;
+  border: 1px solid var(--line);
+}
+.account-tabs [aria-pressed="true"] {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+#account-status {
+  min-height: 25px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.account-session {
+  padding-top: 15px;
+}
+.account-session [data-action] {
+  margin: 8px 0;
+}
+.taste-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.taste-options label {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  font-size: 12px;
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 760px) {
+  .discovery-list {
+    grid-template-columns: 1fr;
+  }
+  .discovery-section {
+    margin-top: 28px;
+  }
+  .feature-tools {
+    gap: 8px;
+  }
+}
+
+/* Expanded genre collection stays within the viewport. */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+}
+.filter-row .chip {
+  flex-shrink: 0;
+  min-height: 40px;
+}
+#taste-dialog {
+  max-width: 580px;
+  max-height: 85dvh;
+  overflow-y: auto;
+}
+.taste-options label {
+  min-height: 44px;
+  cursor: pointer;
+}
+.taste-options label:has(input:checked) {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}

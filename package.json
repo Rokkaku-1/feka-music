@@ -1,0 +1,16 @@
+{
+  "name": "feka-music-repository",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "setup": "npm --prefix design/sonora-prototype ci",
+    "start": "node design/sonora-preview-server.mjs",
+    "build": "node design/sonora-prototype/build.mjs",
+    "test": "npm run build && node --test design/feka-music-api.test.mjs design/feka-music-local-store.test.mjs design/feka-music-radio.test.mjs design/feka-music-seasonal.test.mjs design/feka-music-security.test.mjs design/feka-music-trending.test.mjs",
+    "audit": "npm --prefix design/sonora-prototype audit --omit=dev"
+  }
+}
